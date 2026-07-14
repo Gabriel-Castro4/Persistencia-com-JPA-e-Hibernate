@@ -12,7 +12,7 @@ public class JPAUtil {
     private static final EntityManagerFactory FACTORY =
             Persistence.createEntityManagerFactory("loja", getProps());
 
-    private static Map<String, String> getProps() {  // ← MÉTODO ADICIONADO (SÓ PARA PEGAR AS PROPS)
+    private static Map<String, String> getProps() {
         Dotenv dotenv = Dotenv.configure()
                 .directory("./")
                 .ignoreIfMissing()
