@@ -1,6 +1,7 @@
 package br.com.alura.loja.testes;
 
 import br.com.alura.loja.dao.ProdutoDao;
+import br.com.alura.loja.modelo.Categoria;
 import br.com.alura.loja.util.JPAUtil;
 import br.com.alura.loja.modelo.Produto;
 import javax.persistence.*;
@@ -11,10 +12,7 @@ public class CadastroDeProdutos {
     public static void main(String[] args) {
 
         //Criando novo produto
-        Produto celular = new Produto();
-        celular.setNome("Iphone");
-        celular.setDescricao("Perfeito para trabalho de mídias sociais");
-        celular.setPreco(new BigDecimal(7000));
+        Produto celular = new Produto("iPhone 5000", "Perfeito para trabalho de mídias sociais", new BigDecimal(7000), Categoria.CELULARES);
 
         EntityManager em = JPAUtil.getEntityManager();
         ProdutoDao dao = new ProdutoDao(em);
