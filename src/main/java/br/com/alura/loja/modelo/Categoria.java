@@ -11,6 +11,11 @@ public class Categoria {
     private Long id;
     private String nome;
 
+    //Construtor Default
+    public Categoria() {
+
+    }
+
     public Categoria(String nome) {
         this.nome = nome;
     }
